@@ -1,0 +1,47 @@
+{
+  "name": "storage-changed",
+  "version": "0.1.0",
+  "description": "A utility to listen for changes to localStorage or sessionStorage via CustomEvents.",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint": "tsc --noEmit",
+    "test": "echo \"No tests yet\" && exit 0",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "storage",
+    "localStorage",
+    "sessionStorage",
+    "events",
+    "CustomEvent"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "storage-utilities": "^0.0.2"
+  },
+  "devDependencies": {
+    "tsdown": "^0.21.1",
+    "typescript": "^5.9.3"
+  }
+}
